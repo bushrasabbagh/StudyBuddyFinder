@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0"
+            style="-fx-background-color: lightgrey;" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/11.0.2"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MeetUpCalendarView">
+   <AnchorPane prefHeight="600.0" prefWidth="300.0">
+      <ImageView fx:id="brandingImageView" fitHeight="256.0" fitWidth="261.0" layoutX="25.0" layoutY="67.0"
+                 pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../images/logo.png"/>
+      </ImageView>
+   </AnchorPane>
+   <AnchorPane layoutX="300.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+               prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #a9a9a9 #a9a9a9;">
+      <TableView fx:id="table" layoutX="21.0" layoutY="125.0" onMouseClicked="#showParticipants" prefHeight="264.0"
+                 prefWidth="486.0">
+         <columns>
+            <TableColumn fx:id="meetingName" prefWidth="96.0" text="Meeting Name"/>
+            <TableColumn fx:id="meetingTime" prefWidth="52.0" text="Time"/>
+            <TableColumn fx:id="meetingDate" prefWidth="91.0" text="Date"/>
+            <TableColumn fx:id="meetingCourse" prefWidth="110.0" text="Course"/>
+            <TableColumn fx:id="meetingNote" prefWidth="135.0" text="Notes"/>
+         </columns>
+      </TableView>
+      <Button fx:id="joinMeetingButton" layoutX="176.0" layoutY="405.0" mnemonicParsing="false"
+              onAction="#joinMeeting" prefHeight="45.0" prefWidth="176.0"
+              style="-fx-background-color: #3f8de7#3f8de7 #3f8de7#3f8de7 #3f8de7#3f8de7 #3f8de7#3f8de7;"
+              text="Join Meeting">
+         <font>
+            <Font size="18.0"/>
+         </font>
+      </Button>
+      <Button fx:id="backButton" layoutX="313.0" layoutY="527.0" mnemonicParsing="false" onAction="#backButton"
+              prefHeight="35.0" prefWidth="176.0"
+              style="-fx-background-color: #3f8de7#3f8de7 #3f8de7#3f8de7 #3f8de7#3f8de7 #3f8de7#3f8de7;"
+              text="Back to Pofile">
+         <font>
+            <Font size="19.0"/>
+         </font>
+      </Button>
+      <ListView fx:id="participantsList" layoutX="522.0" layoutY="155.0" prefHeight="234.0" prefWidth="256.0"/>
+      <Label fx:id="messageLabel" layoutX="176.0" layoutY="466.0" prefHeight="29.0" prefWidth="176.0"/>
+      <Label layoutX="349.0" layoutY="26.0" text="Join Meeting">
+         <font>
+            <Font size="19.0"/>
+         </font>
+      </Label>
+      <Label layoutX="522.0" layoutY="125.0" text="Participants">
+         <font>
+            <Font size="17.0"/>
+         </font>
+      </Label>
+      <Label fx:id="infoLabel" alignment="TOP_LEFT" layoutX="21.0" layoutY="78.0" prefHeight="41.0" prefWidth="250.0"
+             text="Select a meeting to see participants and join the meeting"/>
+   </AnchorPane>
+</AnchorPane>

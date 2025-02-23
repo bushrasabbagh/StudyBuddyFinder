@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1100.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/11.0.2"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MyMeetupsView">
+    <AnchorPane prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: lightgrey;">
+        <ImageView fx:id="brandingImageView" fitHeight="256.0" fitWidth="261.0" layoutX="22.0" layoutY="66.0"
+                   pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../images/logo.png"/>
+        </ImageView>
+    </AnchorPane>
+    <AnchorPane layoutX="300.0" prefHeight="600.0" prefWidth="800.0"
+                style="-fx-background-color: #a9a9a9 #a9a9a9 #a9a9a9 #a9a9a9;">
+        <Label layoutX="349.0" layoutY="26.0" text="Your Meetings">
+            <font>
+                <Font size="19.0"/>
+            </font>
+        </Label>
+        <TableView fx:id="table" layoutX="21.0" layoutY="125.0" onMouseClicked="#showParticipants"
+                   prefHeight="264.0" prefWidth="486.0">
+            <columns>
+                <TableColumn fx:id="meetingName" prefWidth="96.0" text="Meeting Name"/>
+                <TableColumn fx:id="meetingTime" prefWidth="52.0" text="Time"/>
+                <TableColumn fx:id="meetingDate" prefWidth="91.0" text="Date"/>
+                <TableColumn fx:id="meetingCourse" prefWidth="110.0" text="Course"/>
+                <TableColumn fx:id="meetingNote" prefWidth="135.0" text="Notes"/>
+            </columns>
+        </TableView>
+        <ListView fx:id="participantsList" layoutX="522.0" layoutY="155.0" prefHeight="234.0" prefWidth="256.0"/>
+        <Label layoutX="522.0" layoutY="125.0" prefHeight="24.0" prefWidth="176.0" text="Participants">
+            <font>
+                <Font size="17.0"/>
+            </font>
+        </Label>
+        <Button fx:id="backButton" layoutX="313.0" layoutY="527.0" mnemonicParsing="false" onAction="#backButton"
+                prefHeight="35.0" prefWidth="176.0"
+                style="-fx-background-color: #3f8de7#3f8de7 #3f8de7#3f8de7 #3f8de7#3f8de7 #3f8de7#3f8de7 #3f8de7#3f8de7 #3f8de7#3f8de7 #3f8de7#3f8de7 #3f8de7#3f8de7;"
+                text="Back to Profile">
+            <font>
+                <Font size="19.0"/>
+            </font>
+        </Button>
+        <Label layoutX="21.0" layoutY="95.0" text="List of all your meetings"/>
+    </AnchorPane>
+</AnchorPane>
